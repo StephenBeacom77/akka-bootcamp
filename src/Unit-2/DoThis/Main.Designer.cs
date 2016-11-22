@@ -36,6 +36,7 @@
             this.ramToggleButton = new System.Windows.Forms.Button();
             this.diskToggleButton = new System.Windows.Forms.Button();
             this.rotationButton = new System.Windows.Forms.Button();
+            this.pauseButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,13 +99,25 @@
             this.rotationButton.TabIndex = 4;
             this.rotationButton.Text = "???";
             this.rotationButton.UseVisualStyleBackColor = true;
-            this.rotationButton.Click += new System.EventHandler(this.cpuWatcher_Click);
+            this.rotationButton.Click += new System.EventHandler(this.rotationButton_Click);
+            // 
+            // pauseButton
+            // 
+            this.pauseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pauseButton.Location = new System.Drawing.Point(597, 267);
+            this.pauseButton.Name = "pauseButton";
+            this.pauseButton.Size = new System.Drawing.Size(75, 23);
+            this.pauseButton.TabIndex = 5;
+            this.pauseButton.Text = "PAUSE ||";
+            this.pauseButton.UseVisualStyleBackColor = true;
+            this.pauseButton.Click += new System.EventHandler(this.pauseButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 446);
+            this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.rotationButton);
             this.Controls.Add(this.diskToggleButton);
             this.Controls.Add(this.ramToggleButton);
@@ -126,6 +139,7 @@
         private System.Windows.Forms.Button ramToggleButton;
         private System.Windows.Forms.Button diskToggleButton;
         private System.Windows.Forms.Button rotationButton;
+        private System.Windows.Forms.Button pauseButton;
     }
 }
 
